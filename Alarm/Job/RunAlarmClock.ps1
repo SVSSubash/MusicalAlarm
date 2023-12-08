@@ -3,6 +3,8 @@
 
 . D:\Source\Alarm\Library\AudioControl.ps1
 
+"Start $(Get-Date)" >> d:\Source\Alarm\Log.txt
+
 $MusicFolder = "D:\Music"
 
 $AlarmSettingsFile = "D:\Source\Alarm\Data\AlarmSettings.txt"
@@ -147,5 +149,7 @@ Start-Alarm
 # Write-Host "[RunAlarmClock]: Starting control of volume of music to a gradual increase." -ForegroundColor Yellow
 
 Control-VolumeFlow -UseIncrementPercentage:$false
+
+"End $(Get-Date)" >> d:\Source\Alarm\Log.txt
 
 
